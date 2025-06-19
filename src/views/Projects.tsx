@@ -30,7 +30,8 @@ const Project: React.FC<ProjectProps> = ({}) => {
       category: 'Web App',
       image: '/assets/cyberscape.png',
       color: 'bg-pink-100',
-      description: 'NFT Virtual Gallery – Final team project during bootcamp',
+      description:
+        'NFT Virtual Gallery – Final team project during bootcamp. I was responsible for the frontend development',
       tech: 'Tech stack: React, Tailwind, Express JS, PostgreSQL, CSS',
     },
     {

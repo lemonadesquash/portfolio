@@ -12,8 +12,8 @@ const About: React.FC<AboutProps> = ({}) => {
           <h2 className="text-4xl md:text-5xl font-bold">✨ About Me</h2>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-12 items-center">
-          <div>
+        <div className="grid md:grid-cols-2 gap-12 items-start">
+          <div className="flex flex-col gap-8">
             <div className="w-80 h-96 mx-auto bg-gradient-to-b from-gray-200 to-gray-300 dark:from-gray-700 dark:to-gray-800 rounded-2xl flex items-center justify-center">
               <img
                 src="/assets/profile.jpg"
@@ -21,21 +21,22 @@ const About: React.FC<AboutProps> = ({}) => {
                 className="w-full h-full object-cover rounded-2xl"
               />
             </div>
-          </div>
-          <div>
-            <p className="text-lg text-gray-600 dark:text-gray-400 mb-8">
+            <p className="text-lg text-gray-600 dark:text-gray-400">
               Hi! I'm Ruth Sitanggang from Indonesia. I've been fascinated with
               computers since I was 13. My interest in programming started from
               playing games — I just had to know how they were made!
             </p>
-            <p className="text-lg text-gray-600 dark:text-gray-400 mb-8">
+
+            <p className="text-lg text-gray-600 dark:text-gray-400">
               Currently, I'm focusing on improving my skills in web development,
               especially using TypeScript. I really enjoy the process of
               learning and solving problems. My goal is to become a full-stack
               developer and build fun, helpful apps that make people’s lives
               easier.
             </p>
-            <div className="grid grid-cols-3 gap-6 mb-8">
+          </div>
+          <div>
+            <div className="grid grid-cols-1 md:grid-cols-1 gap-4 mb-8">
               <div className="text-center p-4 border border-gray-200 dark:border-gray-700 rounded-xl">
                 <div className="text-2xl mb-2">🌐</div>
                 <h4 className="font-semibold mb-1">Languages</h4>

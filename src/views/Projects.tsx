@@ -14,7 +14,7 @@ interface ProjectProps {
   isDarkMode: boolean;
 }
 
-const Project: React.FC<ProjectProps> = ({}) => {
+const Project: React.FC<ProjectProps> = ({isDarkMode}) => {
   const projects: ProjectItem[] = [
     {
       title: 'Astronomy News',
@@ -79,12 +79,13 @@ const Project: React.FC<ProjectProps> = ({}) => {
 
   return (
     <section id="project" className="pt-0 pb-4 md:py-[3.5rem] relative">
-      <div className="max-w-5xl mx-auto px-[1rem] h-[60rem] my-4">
+      <div className="max-w-5xl mx-auto px-2 sm:px-4 h-auto md:h-[60rem] my-4">
         <div className="text-center mb-[2rem]">
           <h2 className="text-[2.5rem] md:text-[3rem] font-bold">
             👩🏻‍💻 My Projects
           </h2>
-          <p className="text-[1.125rem] text-gray-600 dark:text-gray-400 mt-[1rem]">
+          <p className={`text-[1.125rem] mt-[1rem] ${
+            isDarkMode ? 'text-gray-300' : 'text-gray-600' }`}>
             Here’s a collection of projects I’ve built — from personal
             experiments to team collaborations.
           </p>
@@ -96,21 +97,21 @@ const Project: React.FC<ProjectProps> = ({}) => {
             style={{ transform: `translateX(-${currentIndex * 100}%)` }}
           >
             {projects.map((project, index) => (
-              <div key={index} className="min-w-full px-[1rem] flex-shrink-0">
+              <div key={index} className="w-full min-w-0 shrink-0 px-2 md:px-4">
                 <div
-                  className={`${project.color} p-[1.5rem] rounded-2xl shadow-lg h-[40rem]`}
+                  className={`${project.color} p-3 md:p-[1.5rem] rounded-2xl shadow-lg h-auto md:h-[40rem] mb-4`}
                 >
                   <img
                     src={project.image}
                     alt={project.title}
-                    className="w-full h-[28rem] rounded-[0.5rem] object-fill"
+                    className="block w-full h-auto md:h-[28rem] object-contain md:object-fill rounded-[0.5rem]"
                   />
-                  <h3 className="text-[1.25rem] font-semibold mb-[0.5rem]">
+                  <h3 className="text-lg md:text-[1.25rem] font-semibold mb-2 text-gray-900">
                     {project.title}
                   </h3>
-                  <p className="text-gray-600 mb-[1rem]">{project.category}</p>
-                  <p className="text-sm text-gray-500">{project.description}</p>
-                  <p className="text-sm text-gray-500 mt-[1rem] italic">
+                  <p className="text-sm md:text-base text-gray-600 mb-3">{project.category}</p>
+                  <p className="text-xs md:text-sm text-gray-500">{project.description}</p>
+                  <p className="text-xs md:text-sm text-gray-500 mt-[1rem] italic">
                     {project.tech}
                   </p>
                 </div>
@@ -120,13 +121,13 @@ const Project: React.FC<ProjectProps> = ({}) => {
 
           <button
             onClick={handlePrev}
-            className="absolute left-0 top-1/2 -translate-y-1/2 bg-gray-300 dark:bg-gray-800 p-[0.75rem] rounded-full shadow-md hover:bg-gray-500 dark:hover:bg-gray-700 transition"
+            className="absolute left-0 top-1/2 -translate-y-1/2 bg-gray-300/50 dark:bg-gray-800/50 p-2 md:p-3 rounded-full shadow-md active:bg-gray-400 dark:active:bg-gray-700 transition"
           >
             <ChevronLeft size={20} />
           </button>
           <button
             onClick={handleNext}
-            className="absolute right-0 top-1/2 -translate-y-1/2 bg-gray-300 dark:bg-gray-800 p-[0.75rem] rounded-full shadow-md hover:bg-gray-500 dark:hover:bg-gray-700 transition"
+            className="absolute right-0 top-1/2 -translate-y-1/2 bg-gray-300/50 dark:bg-gray-800/50 p-2 md:p-3 rounded-full shadow-md active:bg-gray-400 dark:active:bg-gray-700 transition"
           >
             <ChevronRight size={20} />
           </button>

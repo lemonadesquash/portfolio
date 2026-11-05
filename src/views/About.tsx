@@ -6,7 +6,7 @@ interface AboutProps {
 
 const About: React.FC<AboutProps> = ({}) => {
   return (
-    <section id="about" className="py-[4rem]">
+    <section id="about" className="pt-8 pb-4 md:py-[4rem]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 my-4">
         <div className="text-center mb-10">
           <h2 className="text-4xl md:text-5xl font-bold">✨ About Me</h2>

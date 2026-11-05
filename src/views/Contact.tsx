@@ -35,7 +35,7 @@ const Contact: React.FC<ContactProps> = ({}) => {
   // };
 
   return (
-    <section id="contact" className="py-[10rem]">
+    <section id="contact" className="pt-0 pb-4 md:py-[10rem]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <p className="text-sm text-gray-500 dark:text-gray-400 mb-2">

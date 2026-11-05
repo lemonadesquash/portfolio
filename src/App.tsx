@@ -21,8 +21,8 @@ const App: React.FC = () => {
     >
       <Navbar isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode} />
 
-      <section id="home" className="pt-20 pb-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 my-52">
+      <section id="home" className="pt-16 pb-4 md:pt-20 md:pb-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-8 mb-0 md:mt-52 md:mb-52">
           <div className="text-center">
             <p className="text-lg mb-2">Hi!</p>
 

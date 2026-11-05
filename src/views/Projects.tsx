@@ -78,7 +78,7 @@ const Project: React.FC<ProjectProps> = ({}) => {
   };
 
   return (
-    <section id="project" className="py-[3.5rem] relative">
+    <section id="project" className="pt-0 pb-4 md:py-[3.5rem] relative">
       <div className="max-w-5xl mx-auto px-[1rem] h-[60rem] my-4">
         <div className="text-center mb-[2rem]">
           <h2 className="text-[2.5rem] md:text-[3rem] font-bold">

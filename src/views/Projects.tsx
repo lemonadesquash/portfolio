@@ -86,7 +86,7 @@ const Project: React.FC<ProjectProps> = ({isDarkMode}) => {
           </h2>
           <p className={`text-[1.125rem] mt-[1rem] ${
             isDarkMode ? 'text-gray-300' : 'text-gray-600' }`}>
-            Here’s a collection of projects I’ve built — from personal
+            Here’s a collection of projects I’ve built, from personal
             experiments to team collaborations.
           </p>
         </div>

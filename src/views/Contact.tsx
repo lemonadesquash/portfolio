@@ -11,7 +11,7 @@ interface ContactProps {
 //   message: string;
 // }
 
-const Contact: React.FC<ContactProps> = ({}) => {
+const Contact: React.FC<ContactProps> = ({isDarkMode}) => {
   // const [formData, setFormData] = useState<FormData>({
   //   name: '',
   //   email: '',
@@ -38,11 +38,11 @@ const Contact: React.FC<ContactProps> = ({}) => {
     <section id="contact" className="pt-0 pb-4 md:py-[10rem]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <p className="text-sm text-gray-500 dark:text-gray-400 mb-2">
+          <p className={`text-sm mb-2 ${isDarkMode ? 'text-gray-300' : 'text-gray-600'}`}>
             Get in touch
           </p>
           <h2 className="text-4xl md:text-5xl font-bold">📩 Contact Me!</h2>
-          <p className="text-lg text-gray-600 dark:text-gray-400 mt-4">
+          <p className={`text-lg mt-4 ${isDarkMode ? 'text-gray-300' : 'text-gray-600'}`}>
             Let's discuss your project and how I can help bring your ideas to
             life.
           </p>
@@ -54,9 +54,9 @@ const Contact: React.FC<ContactProps> = ({}) => {
             <h3 className="text-2xl font-bold mb-6">
               Let's talk about everything!
             </h3>
-            <p className="text-gray-600 dark:text-gray-400 mb-8">
+            {/*<p className={`mb-8 ${isDarkMode ? 'text-gray-300' : 'text-gray-600'}`}>
               Don't like forms? Send me an email. 📬
-            </p>
+            </p>*/}
 
             <div className="space-y-6">
               <div className="flex items-center space-x-4">
@@ -65,7 +65,7 @@ const Contact: React.FC<ContactProps> = ({}) => {
                 </div>
                 <div>
                   <h4 className="font-semibold">Email</h4>
-                  <p className="text-gray-600 dark:text-gray-400">
+                  <p className={`${isDarkMode ? 'text-gray-300' : 'text-gray-600'}`}>
                     ruth.damayanti.sitanggang@gmail.com
                   </p>
                 </div>
@@ -77,14 +77,14 @@ const Contact: React.FC<ContactProps> = ({}) => {
                 </div>
                 <div>
                   <h4 className="font-semibold">Location</h4>
-                  <p className="text-gray-600 dark:text-gray-400">
+                  <p className={`${isDarkMode ? 'text-gray-300' : 'text-gray-600'}`}>
                     Jakarta, Indonesia
                   </p>
                 </div>
               </div>
             </div>
 
-            <div className="mt-8">
+            <div className="mt-8 mb-8">
               <h4 className="font-semibold mb-4">Follow me</h4>
               <div className="flex space-x-4">
                 <a

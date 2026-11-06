@@ -30,8 +30,10 @@ const App: React.FC = () => {
               Welcome to My Portfolio 🍀
             </h1>
 
-            <p className="text-xl text-gray-600 dark:text-gray-400 mb-8 max-w-2xl mx-auto">
-              I'm Ruth — a frontend developer & tech enthusiast. Passionate
+            <p className={`text-xl mb-8 max-w-2xl mx-auto ${
+              isDarkMode ?  'text-gray-300' : 'text-gray-600'
+              }`}>
+              I'm Ruth, a frontend developer & tech enthusiast. Passionate
               about turning ideas into interactive and accessible web
               experiences.
               <br />

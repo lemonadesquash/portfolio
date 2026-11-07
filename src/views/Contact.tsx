@@ -1,5 +1,6 @@
 import React from 'react';
 import { Mail, MapPin } from 'lucide-react';
+import Reveal from '../components/Reveal';
 
 interface ContactProps {
   isDarkMode: boolean;
@@ -38,39 +39,51 @@ const Contact: React.FC<ContactProps> = ({isDarkMode}) => {
     <section id="contact" className="pt-0 pb-4 md:py-[10rem]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
+          <Reveal delay={0}>
           <p className={`text-sm mb-2 ${isDarkMode ? 'text-gray-300' : 'text-gray-600'}`}>
             Get in touch
-          </p>
+            </p>
+          </Reveal>
+          <Reveal delay={50}>
           <h2 className="text-4xl md:text-5xl font-bold">📩 Contact Me!</h2>
-          <p className={`text-lg mt-4 ${isDarkMode ? 'text-gray-300' : 'text-gray-600'}`}>
+          </Reveal>
+          <Reveal delay={100}>
+            <p className={`text-lg mt-4 ${isDarkMode ? 'text-gray-300' : 'text-gray-600'}`}>
             Let's discuss your project and how I can help bring your ideas to
             life.
-          </p>
+            </p>
+          </Reveal>
         </div>
 
         {/* <div className="grid md:grid-cols-2 gap-12"> */}
         <div className="flex justify-center">
           <div>
+            <Reveal delay={150}>
             <h3 className="text-2xl font-bold mb-6">
               Let's talk about everything!
-            </h3>
+              </h3>
+            </Reveal>
             {/*<p className={`mb-8 ${isDarkMode ? 'text-gray-300' : 'text-gray-600'}`}>
               Don't like forms? Send me an email. 📬
             </p>*/}
 
             <div className="space-y-6">
+              <Reveal delay={200}>
               <div className="flex items-center space-x-4">
+
                 <div className="w-12 h-12 bg-blue-500 rounded-[0.5rem] flex items-center justify-center">
                   <Mail className="w-6 h-6 text-white" />
                 </div>
                 <div>
+
                   <h4 className="font-semibold">Email</h4>
                   <p className={`${isDarkMode ? 'text-gray-300' : 'text-gray-600'}`}>
                     ruth.damayanti.sitanggang@gmail.com
-                  </p>
+                    </p>
                 </div>
               </div>
-
+                  </Reveal>
+            <Reveal delay={250}>
               <div className="flex items-center space-x-4">
                 <div className="w-12 h-12 bg-purple-500 rounded-[0.5rem] flex items-center justify-center">
                   <MapPin className="w-6 h-6 text-white" />
@@ -81,9 +94,10 @@ const Contact: React.FC<ContactProps> = ({isDarkMode}) => {
                     Jakarta, Indonesia
                   </p>
                 </div>
-              </div>
+                </div>
+            </Reveal>
             </div>
-
+            <Reveal delay={350}>
             <div className="mt-8 mb-8">
               <h4 className="font-semibold mb-4">Follow me</h4>
               <div className="flex space-x-4">
@@ -111,7 +125,9 @@ const Contact: React.FC<ContactProps> = ({isDarkMode}) => {
                   />
                 </a>
               </div>
-            </div>
+              </div>
+            </Reveal>
+
           </div>
 
           {/* <div className="bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-sm">

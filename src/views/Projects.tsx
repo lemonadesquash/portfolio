@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
+import Reveal from '../components/Reveal';
 
 interface ProjectItem {
   title: string;
@@ -81,14 +82,18 @@ const Project: React.FC<ProjectProps> = ({isDarkMode}) => {
     <section id="project" className="pt-0 pb-4 md:py-[3.5rem] relative">
       <div className="max-w-5xl mx-auto px-2 sm:px-4 h-auto md:h-[60rem] my-4">
         <div className="text-center mb-[2rem]">
+          <Reveal delay={0}>
           <h2 className="text-[2.5rem] md:text-[3rem] font-bold">
             👩🏻‍💻 My Projects
-          </h2>
+            </h2>
+          </Reveal>
+          <Reveal delay={50}>
           <p className={`text-[1.125rem] mt-[1rem] ${
             isDarkMode ? 'text-gray-300' : 'text-gray-600' }`}>
             Here’s a collection of projects I’ve built, from personal
             experiments to team collaborations.
-          </p>
+            </p>
+          </Reveal>
         </div>
 
         <div className="relative overflow-hidden">
@@ -98,6 +103,7 @@ const Project: React.FC<ProjectProps> = ({isDarkMode}) => {
           >
             {projects.map((project, index) => (
               <div key={index} className="w-full min-w-0 shrink-0 px-2 md:px-4">
+                <Reveal delay={150}>
                 <div
                   className={`${project.color} p-3 md:p-[1.5rem] rounded-2xl shadow-lg h-auto md:h-[40rem] mb-4`}
                 >
@@ -115,6 +121,7 @@ const Project: React.FC<ProjectProps> = ({isDarkMode}) => {
                     {project.tech}
                   </p>
                 </div>
+              </Reveal>
               </div>
             ))}
           </div>

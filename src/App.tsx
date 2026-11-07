@@ -3,6 +3,7 @@ import Navbar from './components/Navbar';
 import About from './views/About';
 import Contact from './views/Contact';
 import Projects from './views/Projects';
+import Reveal from './components/Reveal'
 
 import { Download } from 'lucide-react';
 
@@ -24,12 +25,15 @@ const App: React.FC = () => {
       <section id="home" className="pt-16 pb-4 md:pt-20 md:pb-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-8 mb-0 md:mt-52 md:mb-52">
           <div className="text-center">
+            <Reveal delay={0}>
             <p className="text-lg mb-2">Hi!</p>
-
+            </Reveal>
+            <Reveal delay={50}>
             <h1 className="text-3xl md:text-7xl font-bold mb-6 leading-tight">
               Welcome to My Portfolio 🍀
-            </h1>
-
+              </h1>
+            </Reveal>
+            <Reveal delay={150}>
             <p className={`text-xl mb-8 max-w-2xl mx-auto ${
               isDarkMode ?  'text-gray-300' : 'text-gray-600'
               }`}>
@@ -39,7 +43,8 @@ const App: React.FC = () => {
               <br />
               Let’s build something awesome together!
             </p>
-
+            </Reveal>
+            <Reveal delay={250}>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="/ruth-resume.pdf"
@@ -49,7 +54,8 @@ const App: React.FC = () => {
                 <span>Download My Resume</span>
                 <Download className="w-4 h-4" />
               </a>
-            </div>
+              </div>
+            </Reveal>
           </div>
         </div>
       </section>
